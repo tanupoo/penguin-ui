@@ -93,4 +93,11 @@ p {
     margin-right: 0.34rem;
     background-color: #FFBBBB;
 }
+.v-date-picker-table.v-date-picker-table--date > table > tbody tr td:nth-child(7) .v-btn__content {
+    color:blue
+}
+
+.v-date-picker-table.v-date-picker-table--date > table > tbody tr td:nth-child(1) .v-btn__content {
+    color:red
+}
 </style>

@@ -68,6 +68,8 @@
                                 :active-picker.sync="activePicker"
                                 :max="(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)"
                                 min="2021-08-01"
+                                locale="ja-jp"
+                                :day-format="d => new Date(d).getDate()"
                                 @change="saveOnset"
                             ></v-date-picker>
                         </v-menu>
@@ -97,6 +99,8 @@
                             :active-picker.sync="activePicker"
                             :max="(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)"
                             min="1900-01-01"
+                            locale="ja-jp"
+                            :day-format="d => new Date(d).getDate()"
                             @change="saveBirthday"
                         ></v-date-picker>
                     </v-menu>
@@ -118,6 +122,7 @@
                     <v-text-field
                         label="主な生活エリア"
                         v-model="formData.livingArea"
+                        id="inform-field"
                         disabled
                     >
                     </v-text-field>
@@ -966,4 +971,7 @@ export default {
 </script>
 
 <style>
+#inform-field {
+    color: #000 !important
+}
 </style>
